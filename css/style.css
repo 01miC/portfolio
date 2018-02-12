@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+* {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
 body {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -315,6 +320,7 @@ nav > ul > li:nth-of-type(5):hover {
   font-family: 'Poppins';
   font-weight: 400;
   font-size: 4em;
+  margin: 30px 0;
 }
 
 .skills .logos {
@@ -423,10 +429,8 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .portfolio .portfolio-desc:hover .pf-background {
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   -webkit-transform: skew(-30deg);
   transform: skew(-30deg);
 }
@@ -591,6 +595,10 @@ nav > ul > li:nth-of-type(5):hover {
     left: 0;
     top: 30%;
   }
+  .about:before {
+    left: -50%;
+    top: -40%;
+  }
   .skills .skills-header > h1 {
     font-size: 2em;
   }
@@ -648,6 +656,9 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 @media screen and (max-width: 450px) {
+  .word.word--magneto {
+    font-size: 2em;
+  }
   nav > ul > li > a {
     font-size: 0.8rem;
   }
@@ -703,8 +714,5 @@ nav > ul > li:nth-of-type(5):hover {
   }
   .content--layout {
     overflow: visible;
-  }
-  .word.word--magneto {
-    font-size: 3em;
   }
 }
