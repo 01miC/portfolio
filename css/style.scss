@@ -1,0 +1,625 @@
+body {
+    margin:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+h1 {
+  margin:0
+}
+.container-fluid {
+  padding:0;
+}
+
+$colormain:#3b3b3b;
+$colorsecond: #ffc400;
+$topposition:2rem;
+//////////////////////
+//                  //
+//////////////////////
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+.home {
+  width: 100%;
+  >.logo {
+    font-family: "Roboto";
+    color: $colormain;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 10;
+    top: $topposition;
+    left: 30px;
+    position:fixed;
+    //padding-bottom: 3px;
+    //border-bottom: 1px solid #222;
+  }
+}
+
+  
+nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    >ul {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        list-style: none;
+        >li {
+            -webkit-flex-basis: 20%;
+            -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+            display: none;
+            >a {
+                position: relative;
+                top: 46%;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                letter-spacing: 4px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                font-size: 1.8rem;
+                word-break: break-all;
+                opacity: 0;
+                transition: all .2s linear;
+                &:hover {
+                    text-decoration: none;
+                    color:inherit;
+                }  
+                      
+            }
+            
+            
+            @for $i from 1 through 5 {
+                &:nth-of-type(#{$i}) {
+                    background-color:rgba(lighten($colormain,7%*$i),0.9);
+                    &:hover {
+                        text-decoration: none;
+                        color:$colormain;
+                        background-color:$colorsecond;
+                    }  
+                }
+
+            }
+          
+        }
+    }   
+}
+  
+  /* ====================================
+  Burger king
+  ==================================== */
+  .overlay-navigation {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    display: none;
+    opacity: 0;
+  }
+  .open-overlay {
+    position: fixed;
+    right: 5rem;
+    top: $topposition;
+    z-index: 100;
+    width: 34px;
+    display: block;
+    border:1px #3b3b3b dotted;
+    width:50px;
+    cursor: pointer;
+    span {
+        display: block;
+        height: 1px;
+        background-color: #3b3b3b;
+        cursor: pointer;
+        margin:8px;
+    }
+  }
+//////////////////////////
+//       SLOGAN         //
+//////////////////////////
+
+.slogan {
+    height:100vh;
+    
+    >h5{
+        margin:0;
+        padding:30px 0;
+        font-weight:400;
+        
+    }
+}
+
+.content {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	min-height: 650px;
+	margin: 0 auto;
+}
+.content--layout {
+	grid-template-columns: 100%;
+	padding: 3em 0;
+}
+.word--magneto {
+	font-size: 10vw;
+	font-family: 'Poppins', serif;
+	font-weight: 700;
+	color: darken($colormain,10%);
+	line-height: 0.8;
+  display: flex;
+}
+
+.word--magneto > span {
+	cursor: default;
+  position: relative;
+  &:hover {
+    color:$colorsecond;
+  }
+}
+
+.word--magneto span span {
+	display: block;
+  pointer-events: none;
+  
+}
+
+.letter8 {
+  margin-left:40px;
+}
+
+.word--magneto svg {
+	position: absolute;
+	left: 50%;
+	margin-left: -1.5vw;
+	width: 3vw;
+	bottom: 70%;
+}
+
+.word--magneto svg circle {
+	fill: $colorsecond;
+	opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+////////////////
+//   ABOUT    //
+////////////////
+
+.about {
+  height:70vh;
+  padding:50px 0;
+  position:relative;
+  
+  &:before {
+    content: '';
+    font-size:15em;
+    width:75vw;
+    height:100vh;
+    position:absolute;
+    left: -50%;
+    top: 1%;
+    transform: rotate(-45deg);
+    color:lighten($colorsecond,80%);
+    background-color:$colorsecond;
+    z-index:-1;
+  }
+  &:after {
+    content: 'about';
+    font-size:5em;
+    position:absolute;
+    left: 5%;
+    top: 30%;
+    color:lighten($colorsecond,30%);
+    z-index:2;
+  }
+  .about-content {
+    text-align:right;
+    z-index:90;
+    padding:20px;
+    >h1 {
+      text-transform: uppercase;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size:4em;
+    }
+    >p {
+      float:right;
+      width:50%;
+      height:100%;
+      font-size:1rem;
+    }
+  }
+}
+
+////////////////
+//   skills   //
+////////////////
+
+.skills {
+    background-color:#fff;
+    width:100%;
+    z-index: 15;
+    padding:0;
+
+  &:before {
+    content: '';
+    position:absolute;
+    right:0;
+    border-top: 13vw solid transparent;
+    border-bottom: 13vw solid transparent; 
+    border-right:13vw solid $colorsecond; 
+  }
+  .skills-header {
+    text-align: center;
+    
+    >h1 {
+      text-transform: uppercase;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size:4em;
+    }  
+  }
+
+  .logos {
+    height:300px;
+    >img {
+      object-fit: contain;
+      height:100%;
+      max-width:100%;
+      position:relative;
+      padding:30px 0;
+      text-align: center;
+    }
+    >span {
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:-1;
+    }
+    &:hover span {
+      display: flex;
+      justify-content: center;
+        align-items: center;
+      z-index:2;
+      background-color:$colorsecond;
+      opacity: 0.95;
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size:1.5em;
+      transition: all 0.1s ease-in;
+      transform: scale(1.1);
+      &:hover .bord {
+        background-color:#fff;
+      }
+      >.bord {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        border:2px $colormain solid;
+        box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+        transition-duration: 0.2s;
+        &:hover {
+          box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+        }
+      }
+    }
+  }
+  .htmlfix{
+    >img{ 
+    max-width:75%;
+    }
+  }
+}
+ 
+//////////////////////////////
+//       Portfolio         //
+////////////////////////////
+
+.portfolio {
+    >h1 {
+      text-align:center;
+      padding:30px 0;
+    }
+  .pf-image {
+    padding:0;
+    >img {
+      max-height:500px;
+      position:relative;
+      width:100.2%;
+      max-width:100.2%;
+      object-fit: cover;
+    }
+  }
+  .portfolio-desc {
+    position:relative;
+    padding:0;
+    .pf-background {
+      position:absolute;
+      width:100%;
+      height:100%;
+      background: #fff;
+      z-index: 1;
+      
+    }
+    &:hover .pf-background {
+      transition: transform 0.2s ease-out;
+      transform: skew(-30deg);
+    }
+    .desc {
+      width:100%;
+      height:100%;
+      position:absolute;
+      z-index:50;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:column;
+      >a {
+        color:$colormain;
+        
+        >button {
+        padding:10px;
+         color:$colormain;
+         background-color:#fff;
+         font-family: 'Poppins';
+         font-weight: 400;
+         font-size:1.2em;
+         transition: all 0.1s ease-in;
+         border:2px $colormain solid;
+         box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+         transition-duration: 0.2s;
+         &:hover {
+           box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+         }
+       }
+      }
+       
+    }
+    &:hover {
+      background-color:$colorsecond;
+    }
+
+  }
+}
+
+////////////////////////////
+//       kontakt         //
+///////////////////////////
+.contact {
+  position: relative;
+  width:100%;
+  padding-bottom:50px;
+  h1 {
+    text-transform: uppercase;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size:2em;
+  }
+  .contactform {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .contactname {
+      font-family: 'Poppins';
+      font-weight: 700;
+      font-size:5em;
+      >span {
+        font-weight: 400;
+        font-size:1.4em;
+        font-family:'VT323'
+      }
+      &::before {
+        content:'_';
+        margin-right:-20px;
+        animation: dash 0.6s linear infinite;
+      }
+    }
+    .contactmail {
+      
+      list-style-type: none;
+      >li {
+        margin:20px 0;
+      }
+      .contact-icons {
+        text-decoration:none;
+        color:$colormain;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size:1.7em;
+       
+        z-index:5;
+        position: relative;
+        >svg{
+          padding-right:15px;
+        }
+      }
+    }
+    
+  }
+&:before {
+  content: '';
+  position: absolute;
+  right:0;
+  bottom:0;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-bottom: 10vw solid $colorsecond;
+}
+}
+
+@keyframes dash {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 451px) {
+  nav > ul > li > a {
+    font-size:0.8rem;
+  }
+  .about {
+    height:100vh;
+    padding:0;
+    &:after {
+      left:0;
+      top:30%;
+    }
+  }
+  .skills .skills-header > h1 {
+    font-size:2em;
+  }
+  .skills .logos {
+    height:200px;
+    margin:20px 0;
+    &:hover span {
+      font-size:0.8em;
+    }
+   
+  }
+  .portfolio .portfolio-desc .desc {
+    >h1 {
+      font-size:1.5em;
+    }
+    >p {
+      font-size:0.8em;
+    }
+    >a {
+      >button {
+        font-size:0.8em;
+      }
+    }
+  }
+  .contact .contactform .contactname {
+    font-size:3em;
+  }
+  .contact .contactform .contactmail .contact-icons {
+    font-size:1em;
+  }
+}
+
+  @media (max-width: 640px) {
+    nav ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    nav ul li {
+      height: 20%;
+    }
+    nav ul li a {
+      font-size: 11px;
+    }
+    nav li a:after {
+      font-size: 0.6rem;
+      bottom: -25px;
+    }
+    nav li a:hover:after {
+      transform: translateY(0);
+    }
+    .open-overlay {
+      right: 1rem;
+    }
+    nav li a:before {
+      width: 25px;
+    }
+  }
+@media screen and (max-width: 450px) {
+  nav > ul > li > a {
+    font-size:0.8rem;
+  }
+  .about {
+    height:100vh;
+    padding:0;
+    &:after {
+      content:'';
+    }
+    &:before {
+      top: -40%;
+    }
+    .about-content {
+      margin-top:50px;
+      text-align:center;
+      >p {
+        float:none;
+        width:100%;
+      }
+    }
+  }
+  .skills .skills-header > h1 {
+    font-size:2em;
+  }
+  .skills .logos {
+    height:200px;
+    margin:20px 0;
+    &:hover span {
+      font-size:0.8em;
+    }
+   
+  }
+  .portfolio .portfolio-desc .desc {
+    >h1 {
+      font-size:1em;
+    }
+    >p {
+      font-size:0.6em;
+    }
+    >a {
+      >button {
+        font-size:0.5em;
+      }
+    }
+  }
+  .contact .contactform .contactname {
+    font-size:2em !important;
+  }
+  .contact .contactform .contactmail .contact-icons {
+    font-size:0.7em;
+  }
+}
+  @media screen and (max-width: 50em) {
+    .content {
+      height: auto;
+      min-height: 0;
+    }
+    .content--layout {
+      overflow: visible;
+    }
+    .word.word--magneto {
+      font-size: 3em;
+    }
+  }
+
