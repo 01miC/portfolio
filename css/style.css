@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 body {
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -43,22 +44,18 @@ nav > ul {
   margin: 0;
   padding: 0;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
 nav > ul > li {
-  -webkit-flex-basis: 20%;
   -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
@@ -81,6 +78,8 @@ nav > ul > li > a {
   font-size: 1.8rem;
   word-break: break-all;
   opacity: 0;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
   transition: all .2s linear;
 }
 
@@ -193,7 +192,8 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .content--layout {
-  grid-template-columns: 100%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   padding: 3em 0;
 }
 
@@ -203,6 +203,8 @@ nav > ul > li:nth-of-type(5):hover {
   font-weight: 700;
   color: #222222;
   line-height: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -235,7 +237,9 @@ nav > ul > li:nth-of-type(5):hover {
 .word--magneto svg circle {
   fill: #ffc400;
   opacity: 0;
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .about {
@@ -252,7 +256,9 @@ nav > ul > li:nth-of-type(5):hover {
   position: absolute;
   left: -50%;
   top: 1%;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   color: white;
   background-color: #ffc400;
   z-index: -1;
@@ -320,7 +326,8 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .skills .logos > img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   max-width: 100%;
   position: relative;
@@ -336,9 +343,15 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .skills .logos:hover span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 2;
   background-color: #ffc400;
   opacity: 0.95;
@@ -347,8 +360,12 @@ nav > ul > li:nth-of-type(5):hover {
   font-family: 'Poppins';
   font-weight: 400;
   font-size: 1.5em;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skills .logos:hover span:hover .bord {
@@ -357,16 +374,24 @@ nav > ul > li:nth-of-type(5):hover {
 
 .skills .logos:hover span > .bord {
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50%;
   border: 2px #3b3b3b solid;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
-  transition-duration: 0.2s;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .skills .logos:hover span > .bord:hover {
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .skills .htmlfix > img {
@@ -387,7 +412,8 @@ nav > ul > li:nth-of-type(5):hover {
   position: relative;
   width: 100.2%;
   max-width: 100.2%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio .portfolio-desc {
@@ -404,8 +430,14 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .portfolio .portfolio-desc:hover .pf-background {
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
-  transform: skew(-30deg);
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform: skew(-30deg);
+      -ms-transform: skew(-30deg);
+          transform: skew(-30deg);
 }
 
 .portfolio .portfolio-desc .desc {
@@ -413,10 +445,19 @@ nav > ul > li:nth-of-type(5):hover {
   height: 100%;
   position: absolute;
   z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .portfolio .portfolio-desc .desc > a {
@@ -430,14 +471,20 @@ nav > ul > li:nth-of-type(5):hover {
   font-family: 'Poppins';
   font-weight: 400;
   font-size: 1.2em;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   border: 2px #3b3b3b solid;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
-  transition-duration: 0.2s;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .portfolio .portfolio-desc .desc > a > button:hover {
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .portfolio .portfolio-desc:hover {
@@ -459,10 +506,19 @@ nav > ul > li:nth-of-type(5):hover {
 
 .contact .contactform {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact .contactform .contactname {
@@ -480,7 +536,8 @@ nav > ul > li:nth-of-type(5):hover {
 .contact .contactform .contactname::before {
   content: '_';
   margin-right: -20px;
-  animation: dash 0.6s linear infinite;
+  -webkit-animation: dash 0.6s linear infinite;
+          animation: dash 0.6s linear infinite;
 }
 
 .contact .contactform .contactmail {
@@ -513,6 +570,15 @@ nav > ul > li:nth-of-type(5):hover {
   border-left: 10vw solid transparent;
   border-right: 10vw solid transparent;
   border-bottom: 10vw solid #ffc400;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes dash {
@@ -567,7 +633,6 @@ nav > ul > li:nth-of-type(5):hover {
   nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
@@ -582,7 +647,9 @@ nav > ul > li:nth-of-type(5):hover {
     bottom: -25px;
   }
   nav li a:hover:after {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
   .open-overlay {
     right: 1rem;
