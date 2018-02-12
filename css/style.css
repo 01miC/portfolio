@@ -583,6 +583,21 @@ nav > ul > li:nth-of-type(5):hover {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    height: 100vh;
+    padding: 0;
+  }
+  .about:after {
+    left: 0;
+    top: 20%;
+  }
+  .about:before {
+    left: -50%;
+    top: -20%;
+  }
+}
+
 @media screen and (max-width: 767px) and (min-width: 451px) {
   nav > ul > li > a {
     font-size: 0.8rem;
@@ -596,7 +611,9 @@ nav > ul > li:nth-of-type(5):hover {
     top: 30%;
   }
   .about:before {
-    left: -50%;
+    width: 100vw;
+    height: 100vh;
+    left: -70%;
     top: -40%;
   }
   .skills .skills-header > h1 {
@@ -670,6 +687,7 @@ nav > ul > li:nth-of-type(5):hover {
     content: '';
   }
   .about:before {
+    left: -90%;
     top: -40%;
   }
   .about .about-content {
