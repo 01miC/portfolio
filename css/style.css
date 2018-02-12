@@ -2,7 +2,7 @@
 body {
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -79,7 +79,6 @@ nav > ul > li > a {
   word-break: break-all;
   opacity: 0;
   -webkit-transition: all .2s linear;
-  -o-transition: all .2s linear;
   transition: all .2s linear;
 }
 
@@ -192,8 +191,7 @@ nav > ul > li:nth-of-type(5):hover {
 }
 
 .content--layout {
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  grid-template-columns: 100%;
   padding: 3em 0;
 }
 
@@ -238,8 +236,7 @@ nav > ul > li:nth-of-type(5):hover {
   fill: #ffc400;
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 .about {
@@ -257,8 +254,7 @@ nav > ul > li:nth-of-type(5):hover {
   left: -50%;
   top: 1%;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   color: white;
   background-color: #ffc400;
   z-index: -1;
@@ -327,7 +323,7 @@ nav > ul > li:nth-of-type(5):hover {
 
 .skills .logos > img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   height: 100%;
   max-width: 100%;
   position: relative;
@@ -347,11 +343,11 @@ nav > ul > li:nth-of-type(5):hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 2;
   background-color: #ffc400;
   opacity: 0.95;
@@ -361,11 +357,9 @@ nav > ul > li:nth-of-type(5):hover {
   font-weight: 400;
   font-size: 1.5em;
   -webkit-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .skills .logos:hover span:hover .bord {
@@ -375,23 +369,22 @@ nav > ul > li:nth-of-type(5):hover {
 .skills .logos:hover span > .bord {
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50%;
   border: 2px #3b3b3b solid;
   -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
   -webkit-transition-duration: 0.2s;
-       -o-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .skills .logos:hover span > .bord:hover {
   -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .skills .htmlfix > img {
@@ -413,7 +406,7 @@ nav > ul > li:nth-of-type(5):hover {
   width: 100.2%;
   max-width: 100.2%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-desc {
@@ -432,12 +425,10 @@ nav > ul > li:nth-of-type(5):hover {
 .portfolio .portfolio-desc:hover .pf-background {
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
-  -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
   -webkit-transform: skew(-30deg);
-      -ms-transform: skew(-30deg);
-          transform: skew(-30deg);
+  transform: skew(-30deg);
 }
 
 .portfolio .portfolio-desc .desc {
@@ -449,15 +440,15 @@ nav > ul > li:nth-of-type(5):hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .portfolio .portfolio-desc .desc > a {
@@ -472,19 +463,17 @@ nav > ul > li:nth-of-type(5):hover {
   font-weight: 400;
   font-size: 1.2em;
   -webkit-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   border: 2px #3b3b3b solid;
   -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
   -webkit-transition-duration: 0.2s;
-       -o-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .portfolio .portfolio-desc .desc > a > button:hover {
   -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .portfolio .portfolio-desc:hover {
@@ -510,15 +499,15 @@ nav > ul > li:nth-of-type(5):hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .contact .contactform .contactname {
@@ -537,7 +526,7 @@ nav > ul > li:nth-of-type(5):hover {
   content: '_';
   margin-right: -20px;
   -webkit-animation: dash 0.6s linear infinite;
-          animation: dash 0.6s linear infinite;
+  animation: dash 0.6s linear infinite;
 }
 
 .contact .contactform .contactmail {
@@ -648,8 +637,7 @@ nav > ul > li:nth-of-type(5):hover {
   }
   nav li a:hover:after {
     -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   .open-overlay {
     right: 1rem;
