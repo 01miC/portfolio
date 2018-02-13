@@ -153,7 +153,8 @@ nav > ul > li:nth-of-type(5):hover {
 
 .open-overlay {
   position: fixed;
-  right: 5rem;
+  margin-right: 5%;
+  right: 0;
   top: 2rem;
   z-index: 100;
   width: 34px;

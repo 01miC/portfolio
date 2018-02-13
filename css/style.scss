@@ -120,7 +120,8 @@ nav {
   }
   .open-overlay {
     position: fixed;
-    right: 5rem;
+    margin-right:5%;
+    right:0;
     top: $topposition;
     z-index: 100;
     width: 34px;
