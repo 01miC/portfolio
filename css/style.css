@@ -410,8 +410,8 @@ nav > ul > li:nth-of-type(5):hover {
 .portfolio .pf-image > img {
   max-height: 500px;
   position: relative;
-  width: 100.2%;
-  max-width: 100.2%;
+  width: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
