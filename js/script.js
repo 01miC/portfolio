@@ -1,4 +1,4 @@
-$('.open-overlay').click(function() {
+$('.open-overlay').click(function(event) {
   if(!event.detail || event.detail == 1) {
     var overlay_navigation = $('.overlay-navigation');
     
@@ -10,7 +10,7 @@ $('.open-overlay').click(function() {
     }
   }
 });
-$('nav ul li').click(function() {
+$('nav ul li').click(function(event) {
   if(!event.detail || event.detail == 1) {
     overlayClose();
   }

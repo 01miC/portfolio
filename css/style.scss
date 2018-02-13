@@ -383,17 +383,18 @@ nav {
   .portfolio-desc {
     position:relative;
     padding:0;
-    
+    -webkit-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
     .pf-background {
       position:absolute;
       width:100%;
       height:100%;
       background-color: #fff;
       z-index: 1;
-      -webkit-transition: background-color 0.2s ease-out, -webkit-transform 0.2s ease-in;
-      transition: background-color 0.2s ease-out, -webkit-transform 0.2s ease-in;
-      transition: background-color 0.2s ease-out, transform 0.2s ease-in;
-      transition: background-color 0.2s ease-out, transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+      transition: -webkit-transform 0.2s ease-in;
+      transition: transform 0.2s ease-in;
+      transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
     }
     &:hover {
       background-color:$colorsecond;
